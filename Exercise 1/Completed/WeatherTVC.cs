@@ -42,7 +42,7 @@ namespace WeatherApp
 
 			cell.TextLabel.Text = weather.City;
 			cell.DetailTextLabel.Text = weather.ToString ();
-			cell.ImageView.Image = UIImage.FromBundle(weather.CurrentConditions.ToString() + ".png");
+			cell.ImageView.Image = UIImage.FromBundle(weather.CurrentConditions.ToString().ToLower() + ".png");
 
 			return cell;
 		}

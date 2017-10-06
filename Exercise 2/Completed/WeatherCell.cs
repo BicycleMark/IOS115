@@ -45,7 +45,7 @@ namespace WeatherApp
 
 		public void UpdateData (Weather weather)
 		{
-			imgWeather.Image = UIImage.FromBundle(weather.CurrentConditions.ToString() + ".png");
+			imgWeather.Image = UIImage.FromBundle(weather.CurrentConditions.ToString().ToLower() + ".png");
 
 			lblCity.Text = weather.City;
 			lblHigh.Text = String.Format ("{0}", weather.High);
